@@ -1,0 +1,48 @@
+#page {
+  width 45rem
+  float left
+  background: #ffffff
+  padding 1rem
+  box-sizing border-box
+  min-height 30vh
+  .post-header {
+    text-align center
+    margin 1rem 0
+  }
+  .post-body {
+    .category-all-title {
+      text-align center
+    }
+    .category-all {
+      line-height 2
+      margin-top 1rem
+      .category-list-item {
+        margin 0.3rem 0.6rem
+        cursor pointer
+      }
+      .category-list-count {
+        color #bbbbbb
+        &:before {
+          content '('
+          display inline
+        }
+        &:after {
+          content ')'
+          display inline
+        }
+      }
+      .category-list-child {
+        padding-left 0.625rem
+        list-style-type circle
+      }
+    }
+  }
+  .tag-cloud {
+    text-align center
+    a {
+      display inline-block
+      margin 10px
+      cursor pointer
+    }
+  }
+}

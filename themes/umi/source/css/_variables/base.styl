@@ -1,0 +1,72 @@
+// Layout size
+$content-desktop = 1110px
+
+@font-face {
+  font-family zpix
+  src url('/font/zpix.woff2') format('woff2')
+}
+
+
+// Colors
+// colors for use across theme.
+// --------------------------------------------------
+
+$whitesmoke   = #f5f5f5
+$gainsboro    = #eee
+$gray-lighter = #ddd
+$grey-light   = #ccc
+$grey         = #bbb
+$grey-dark    = #999
+$grey-dim     = #666
+$black-light  = #555
+$black-dim    = #333
+$black-deep   = #222
+$red          = #ff2a2a
+$blue-bright  = #87daff
+$blue         = #0684bd
+$blue-deep    = #262a30
+$orange       = #fc6423
+
+$primary-bg-color = #5DCBE4
+$primary-bg-color-rgba = rgba(93,203,228, .5)
+$second-bg-color = #47BCE4
+$second-bg-color-rgba = rgba(71,188,228, .5)
+$primary-color = #454545
+$title-color = #444
+$primary-bg = rgba(98,171,190, .5)
+$primary-linear-color = linear-gradient(180deg, $primary-bg-color 0%, $second-bg-color 100%)
+$primary-linear-color-rgba = linear-gradient(180deg, $primary-bg-color-rgba 0%, $second-bg-color-rgba 100%)
+$border-color = #eeeeee
+$header-height = 50vh
+
+get_font_family(config) {
+  custom_family = hexo-config('font.' + config + '.family')
+  return custom_family is a 'string' ? custom_family : null
+}
+
+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, monospace if get_font_family('codes')
+
+// Table
+// --------------------------------------------------
+$table-width                    = 100%
+$table-border-color             = $gray-lighter
+$table-font-size                = 14px
+$table-content-alignment        = left
+$table-content-vertical         = middle
+$table-th-font-weight           = 700
+$table-cell-padding             = 8px
+$table-cell-border-right-color  = $gainsboro
+$table-cell-border-bottom-color = $gray-lighter
+$table-row-odd-bg-color         = #f9f9f9
+$table-row-hover-bg-color       = $whitesmoke
+
+
+
+// Code & Code Blocks
+// --------------------------------------------------
+$code-font-family               = $font-family-monospace
+$code-font-size                 = 13px
+$code-font-size                 = unit(hexo-config('font.codes.size'), px) if hexo-config('font.codes.size') is a 'unit'
+$code-border-radius             = 3px
+$code-foreground                = $black-light
+$code-background                = $gainsboro

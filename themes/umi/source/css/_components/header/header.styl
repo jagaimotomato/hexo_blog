@@ -1,0 +1,117 @@
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  #menu {
+    .menu-item-active {
+      color #ffffff
+    }
+    .menu-item {
+      display: inline-block;
+      margin: 0 1rem 0 0
+      position relative
+      transition 0.4s
+      a {
+        display: inline-block;
+        cursor pointer
+        height 1.5rem
+        line-height 1.5rem
+        padding 0.4rem
+      }
+      &:hover {
+        box-shadow: inset 6.5em 0 0 0 rgba(255, 255, 255, .2);
+      }
+      &:before {
+        //transform scaleX(0)
+        //transform-origin bottom right
+        //content " "
+        //display block
+        //position absolute
+        //top 0
+        //right 0
+        //bottom 0
+        //left 0
+        //inset 0 0 0 0
+        //background rgba(255, 255, 255, .2)
+        //transition transform 0.3s ease
+        //border-radius 0.2rem
+      }
+      &:hover:before {
+        //transform: scaleX(1)
+        //transform-origin bottom left
+      }
+      &:hover {
+        .submenu {
+        }
+      }
+      i {
+        margin-right 0.125rem
+      }
+      .submenu {
+        position absolute
+        overflow hidden
+        left -1rem
+        right -1rem
+        height 0
+        top 1.9rem
+        border-radius 0.25rem
+        text-align center
+        transition height 1s ease-in-out
+        box-sizing border-box
+        z-index 1
+        .submenu-item {
+          transition background .3s ease-in-out
+          &:hover {
+            background #ffffff
+          }
+        }
+        a {
+          padding: 0.625rem 0
+          font-size 0.875rem
+          display inline-block
+          height 1rem
+          line-height 1rem
+        }
+      }
+    }
+  }
+}
+.header-video {
+  height 100vh
+  display flex
+  align-items center
+  justify-content center
+  text-align center
+  padding 0 20px
+  .video-container {
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    overflow hidden
+    background url("/images/umi.jpg") no-repeat center cover
+    video {
+      min-width 100%
+      min-height 100%
+      position absolute
+      top 50%
+      left: 50%
+      transform translate(-50%, -50%)
+      object-fit cover
+      &:after {
+        content ''
+        z-index 1
+        height 100%
+        width 100%
+        top 0
+        left 0
+        background-color rgba(0, 0, 0, .5)
+        position absolute
+      }
+    }
+  }
+}
+@import "cat"
+@import "pixel"

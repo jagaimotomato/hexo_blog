@@ -1,0 +1,175 @@
+#posts {
+  float left
+  width 45rem
+}
+
+.post {
+  box-sizing border-box
+  ul, ol {
+    list-style-type disc
+    margin-left 1.5rem
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height 1.5
+    font-weight bold
+    margin 1.2rem 0 1rem
+    padding-top 0.75rem
+  }
+  position relative
+  background-color: #fff;
+  padding 2.5rem
+  border-radius 0.5rem
+
+  &:not(:first-child) {
+    margin-top 5rem
+  }
+
+  .post-date {
+    text-align center
+    position absolute
+    left -2.25rem
+    top -2.25rem
+    width 4.5rem
+    height 4.5rem
+    box-sizing border-box
+    border-radius 50%
+    background $primary-linear-color
+    box-shadow 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%)
+    color #fff
+    padding-top 0.5rem
+
+    .post-day {
+      font-size 2rem
+      font-weight 700
+    }
+  }
+
+  .post-block {
+    .post-header {
+      margin-bottom 1rem
+
+      .post-title, .post-title-link {
+        color $title-color
+        font-size 1.5625rem
+        font-weight 700
+      }
+
+      .post-title {
+        text-align center
+        word-break break-word
+
+        a {
+          display block
+          cursor pointer
+          transition all .2s linear
+        }
+
+        a:hover {
+          transform scale(1.2)
+        }
+      }
+
+      .post-badge {
+        margin 2rem 0
+        text-align center
+        span {
+          cursor pointer
+          display inline-block
+
+          &:not(:first-child) {
+            maring-left 0.2rem
+          }
+        }
+      }
+
+      .post-meta {
+        margin 2rem 0
+        font-size 0.875rem
+        display flex
+        justify-content center
+        text-align center
+        span {
+          vertical-align middle
+        }
+        .post-time {
+          color $primary-bg-color
+          display flex
+          justify-content center
+          align-items center
+        }
+
+        .post-meta-divider {
+          color $primary-color
+          font-size 1.5rem
+          display block
+        }
+
+        .post-meta-item-icon {
+          margin 0 0.5rem
+        }
+
+        .post-wordcount {
+          display flex
+          color: $primary-color
+          justify-content center
+          align-items center
+        }
+
+        .post-description {
+          margin 2rem 0
+          text-align center
+        }
+      }
+    }
+
+    .post-body {
+      line-height 2
+      font-size 1.125
+      .post-button {
+        margin-top 5rem
+        vertical-align middle
+        text-align center
+        a {
+          border-radius 0.3rem
+          color #ffffff
+          display inline-block
+          cursor pointer
+          background: $primary-linear-color
+          padding 0.28125rem 0.5rem
+        }
+      }
+    }
+
+    .post-footer {
+      .post-tags {
+        margin-top 2rem
+        text-align center
+        a {
+          color #ffffff
+          display inline-block
+          padding 0.2rem 0.5rem
+          background $primary-linear-color
+          border-radius 0.5rem
+        }
+      }
+    }
+    .post-nav {
+      display table
+      margin-top 15px
+      width 100%
+      border-top 1px solid $border-color
+      .post-nav-item {
+        display table-cell
+        padding 2rem 0 0 0
+        width 45%
+        vertical-align top
+        a {
+          cursor pointer
+        }
+      }
+      .post-nav-prev {
+        text-align right
+      }
+    }
+  }
+}

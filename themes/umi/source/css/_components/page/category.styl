@@ -1,0 +1,84 @@
+#post-block {
+  float left
+  width 45rem
+  background #ffffff
+  box-sizing border-box
+  padding 2.5rem
+  .posts-collapse {
+    maring-left 2rem
+    position relative
+    &:before {
+      background #f5f5f5
+      content ' '
+      height 100%
+      left 0
+      margin-left -0.1rem
+      position absolute
+      top 1.25rem
+      width 0.25rem
+    }
+    .collection-title {
+      font-size 1.125em
+      position relative
+      &:before {
+        background #999999
+        border 1px solid #000
+        border-radius 50%
+        content ' '
+        height 0.625rem
+        left 0
+        margin-left -6px
+        margin-top -4px
+        position absolute
+        top 50%
+        width 0.625rem
+      }
+    }
+    .collection-header {
+      margin 0 0 0 1.25rem
+      small {
+        color #bbbbbb
+        margin-left 5px
+        font-size 80%
+      }
+    }
+    .collection-year {
+      font-size 1.5em
+      font-weight bold
+      margin 3.75rem 0
+      position relative
+      &:before {
+        background: #bbb;
+        border-radius: 50%;
+        content: ' ';
+        height: 8px;
+        left: 0;
+        margin-left: -4px;
+        margin-top: -4px;
+        position: absolute;
+        top: 50%;
+        width: 8px;
+      }
+    }
+    .post-header {
+      border-bottom: 1px dashed #ccc;
+      margin: 30px 0;
+      padding-left: 15px;
+      position: relative;
+      transition-property: border;
+      transition-delay: 0s;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+      text-align left
+      .post-meta {
+        display: inline;
+        font-size: 0.75em;
+        margin-right: 10px;
+      }
+      .post-title {
+        display: inline;
+        cursor pointer
+      }
+    }
+  }
+}

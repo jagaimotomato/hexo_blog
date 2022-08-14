@@ -1,0 +1,242 @@
+.sidebar-toggle {
+  background $primary-bg-color
+  position fixed
+  cursor pointer
+  height 1rem
+  width 1rem
+  padding 0.3rem
+  left 2rem
+  bottom 3rem
+  display flex
+  justify-content space-between
+  flex-direction column
+  z-index 1
+  .sidebar-toggle-line {
+    background-color #fff
+    height 0.125rem
+    transition all .4s
+    width 100%
+  }
+  .sidebar-toggle-line:not(:first-child) {
+    margin-top 0.1875rem
+  }
+}
+#sidebar {
+  width 22.5rem
+  float right
+  border-radius 0.5rem
+  background: #fff;
+
+  .sidebar-inner {
+    padding 1.25rem 1rem
+    box-sizing border-box
+    width 100%
+
+    .site-author {
+      display flex
+      border-bottom 1px solid #eeeeee
+      padding-bottom 1rem
+
+      .site-author-image {
+        width 5.625rem
+        height 5.625rem
+        border-radius 50%
+        margin-right 1.5rem
+        animation: blur .8s ease-in-out forwards;
+        &:hover {
+          animation: avatar 0.8s linear 0s;
+        }
+      }
+
+      .site-author-name {
+        font-size 1.4rem
+        letter-spacing 0.05rem
+        color $primary-bg-color
+        font-weight 700
+      }
+
+      .site-description {
+        margin-top 1rem
+      }
+    }
+    .links-of-author {
+      display flex
+      justify-content center
+      margin 1rem 0
+      flex-wrap wrap
+
+      .links-of-author-item {
+        margin 0 0 0.525rem
+        transition all .2s linear
+        box-sizing border-box
+        cursor pointer
+        &:hover {
+          transform scale(1.2)
+        }
+        a {
+          font-size 0.75rem
+          height 1.5625rem
+          line-height 1.5625rem
+          border-radius 1rem
+          fill rgba(0, 0 ,0, .5)
+          background-color: rgba(230, 244, 249, .8);
+          transition all .3 ease-in-out
+          display flex
+          vertical-align middle
+          align-items center
+          justify-content center
+          padding 0 0.625rem
+          margin 0 0.3125rem
+          svg {
+            width 1rem
+            vertical-align middle
+          }
+          span {
+            display inline-block
+            margin-left: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.toggle.toggle-arrow {
+  justify-content center
+  align-items end
+  .toggle-line-first {
+    transform: rotate(45deg);
+    width: 50%;
+  }
+
+  .toggle-line-middle {
+    width: 90%;
+  }
+
+  .toggle-line-last {
+    transform: rotate(-45deg);
+    width: 50%;
+  }
+
+  .sidebar-toggle-line {
+    margin 0
+  }
+}
+
+.toggle.toggle-close {
+  .toggle-line-first {
+    position absolute
+    top 50%
+    left 50%
+    width 70%
+    transform translateX(-50%) translateY(-50%) rotate(-45deg)
+    //transform: rotate(-45deg);
+  }
+
+  .toggle-line-middle {
+    display none
+  }
+
+  .toggle-line-last {
+    //transform: rotate(45deg);
+    width 70%
+    margin 0
+    position absolute
+    top 50%
+    left 50%
+    transform translateX(-50%) translateY(-50%) rotate(45deg)
+  }
+}
+
+#not_index_sidebar {
+  &.sidebar-active {
+    left 0
+  }
+  left -20rem
+  width 20rem
+  color #ffffff
+  transition-delay 0s
+  transition-duration .2s
+  transition-timing-function ease-out
+  background $primary-linear-color
+  position fixed
+  bottom 0
+  top 0
+  .sidebar-inner {
+    padding 1.1rem 0.9rem
+    text-align center
+
+    .sidebar-nav {
+      margin 0
+      padding-bottom 1.25rem
+      padding-left 0
+    }
+
+    .sidebar-panel {
+      display none
+      overflow-x hidden
+      overflow-y auto
+      .post-toc ol {
+        text-align left
+        padding: 0 0.125rem 0.3125rem 0.625rem
+        .nav-item {
+          line-height 1.8
+          overflow hidden
+          text-overflow ellipsis
+          white-space nowrap
+          cursor pointer
+        }
+        .active > a {
+          display inline-block
+          padding 0.05rem 0
+          border-bottom 1px solid #ffffff
+        }
+        .active-current > .nav-child {
+          display block
+        }
+      }
+    }
+
+    .sidebar-panel-active {
+      display block
+    }
+  }
+}
+
+@keyframes avatar {
+0% {
+    transform: scale(1.2) rotateZ(3deg);
+    animation-timing-function: ease-in;
+}
+12.5% {
+    transform: scale(1.2) rotateZ(-3deg)
+}
+25% {
+    transform: scale(1.2) rotateZ(3deg)
+}
+37.5% {
+    transform: scale(1.2) rotateZ(-3deg)
+}
+50% {
+    transform: scale(1.2) rotateZ(3deg)
+    animation-timing-function: ease-out
+}
+62.5% {
+    transform: scale(1.2) rotateZ(-3deg)
+}
+75% {
+    transform: scale(1.2) rotateZ(3deg)
+}
+87.5% {
+    transform: scale(1.2) rotateZ(-3deg)
+}
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
