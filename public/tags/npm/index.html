@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/eren/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/eren/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/eren/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/favicon/eren/favicon-32x32.png" color="">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+  
+  
+    
+  
+  <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqus.js"></script>
+
+<script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jagaimotomato.monster","root":"/","exturl":false,"sidebar":{"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"favicon":{"visibilitychange":true,"normal":"/images/favicon/eren/favicon-32x32.png","hidden":"/images/favicon/eren/favicon-32x32.png","show_text":"(/≧▽≦/)こんにちは！","hide_text":"なんでもないや"},"leancloud":{"enable":false,"appID":"4LWt014aPw3I9B30KBI7BVGV-gzGzoHsz","appKey":"lc91Gi0ywAzbVSXm8Ucwsr0G"}};
+  </script>
+
+  <title>标签: npm | 土豆或番茄</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container ">
+    <header class="header"  itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+        
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="main-menu menu">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-home"></i>
+            首页
+          </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-th"></i>
+            分类
+          </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-archive"></i>
+            归档
+          </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-tags"></i>
+            标签
+          </a>
+          
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-user"></i>
+            关于
+          </a>
+          
+        </li>
+      
+
+      
+
+
+
+
+
+
+    </ul>
+    
+</nav>
+
+
+
+<section class="pixel">
+  <div class="pixel-wrap">
+    <div class="pixel-title">
+        土豆或番茄
+    </div>
+    <div class="SpritesheetSlider">
+      <!-- This div is our character -->
+      <div class="Character Character--walk-down">
+        <picture><source srcset="/images/pixel/shadow.png" type="image/webp"><img loading="lazy" src="/images/pixel/shadow.png" class="Character_shadow PixelArtImage" /></picture>
+        <!-- Spritesheets injected here: -->
+      </div>
+      <div class="Navigation flex-center">
+        <!-- Navigation bubbles injected here: -->
+      </div>
+      <button class="NextSpritesheetButton NextSpritesheetButton--prev" onclick="setPreviousActive()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 4 7" shape-rendering="crispEdges">
+          <path stroke="#434343" d="M3 0h1M2 1h1M1 2h1M0 3h1M1 4h1M2 5h1M3 6h1" />
+        </svg>
+      </button>
+      <button class="NextSpritesheetButton NextSpritesheetButton--next" onclick="setNextActive()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 4 7" shape-rendering="crispEdges">
+          <path stroke="#434343" d="M0 0h1M1 1h1M2 2h1M3 3h1M2 4h1M1 5h1M0 6h1" />
+        </svg>
+      </button>
+    </div>
+    <div class="DemoDirectionUI flex-center">
+      <button class="DirectionArrow DirectionArrow-left" onclick="setDirection('LEFT')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+          <path class="Arrow_outline-top"  stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+          <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h5M7 3h5M1 4h4M7 4h5M1 5h3M7 5h5M1 6h4M7 6h5M1 7h5M7 7h5M1 8h11" />
+          <path class="Arrow_arrow-inset"  stroke="#434343" d="M6 3h1M5 4h1M4 5h1" />
+          <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M6 4h1M5 5h2M5 6h2M6 7h1" />
+          <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+          <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+          <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+        </svg>
+      </button>
+      <button class="DirectionArrow DirectionArrow-up" onclick="setDirection('UP')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+          <path class="Arrow_outline-top"  stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+          <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h11M1 4h5M7 4h5M1 5h4M8 5h4M1 6h3M9 6h3M1 7h11M1 8h11" />
+          <path class="Arrow_arrow-inset"  stroke="#434343" d="M6 4h1M5 5h1M7 5h1" />
+          <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M6 5h1M4 6h5" />
+          <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+          <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+          <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+        </svg>
+      </button>
+      <button class="DirectionArrow DirectionArrow-down DirectionArrow--active" onclick="setDirection('DOWN')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+          <path class="Arrow_outline-top" stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+          <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h11M1 4h3M9 4h3M1 5h4M8 5h4M1 6h5M7 6h5M1 7h11M1 8h11" />
+          <path class="Arrow_arrow-inset" stroke="#434343" d="M4 4h5" />
+          <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M5 5h3M6 6h1" />
+          <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+          <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+          <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+        </svg>
+      </button>
+      <button class="DirectionArrow DirectionArrow-right" onclick="setDirection('RIGHT')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 13 13" shape-rendering="crispEdges">
+          <path class="Arrow_outline-top"  stroke="#5f5f5f" d="M1 0h11M0 1h1M12 1h1M0 2h1M12 2h1M0 3h1M12 3h1M0 4h1M12 4h1M0 5h1M12 5h1M0 6h1M12 6h1M0 7h1M12 7h1M0 8h1M12 8h1" />
+          <path class="Arrow_surface" stroke="#f5f5f5" d="M1 1h11M1 2h11M1 3h5M7 3h5M1 4h5M8 4h4M1 5h5M9 5h3M1 6h5M8 6h4M1 7h5M7 7h5M1 8h11" />
+          <path class="Arrow_arrow-inset"  stroke="#434343" d="M6 3h1M7 4h1M8 5h1" />
+          <path class="Arrow_arrow-body" stroke="#5f5f5f" d="M6 4h1M6 5h2M6 6h2M6 7h1" />
+          <path class="Arrow_outline-bottom" stroke="#434343" d="M0 9h1M12 9h1M0 10h1M12 10h1M0 11h1M12 11h1M1 12h11" />
+          <path class="Arrow_edge" stroke="#ffffff" d="M1 9h11" />
+          <path class="Arrow_front" stroke="#cccccc" d="M1 10h11M1 11h11" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<script src="/js/header/pixel.js"></script>
+
+
+
+      </div>
+    </header>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap clearfix">
+          
+
+  
+  
+  
+  <div id="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">npm
+          <small>标签</small>
+        </h2>
+      </div>
+
+      
+
+    
+
+    
+      
+      <div class="collection-year">
+        <span class="collection-header">2022</span>
+      </div>
+    
+
+    <article itemscope itemtype="http://schema.org/Article">
+      <header class="post-header">
+
+        <div class="post-meta">
+          <time itemprop="dateCreated"
+                datetime="2022-08-06T15:17:23+08:00"
+                content="2022-08-06">
+            08-06
+          </time>
+        </div>
+
+        <div class="post-title">
+          
+            <a class="post-title-link" href="/2022/08/06/npm/" itemprop="url">
+              <span itemprop="name">npm</span>
+            </a>
+          
+        </div>
+
+      </header>
+    </article>
+
+  
+
+    </div>
+  </div>
+  
+  
+  
+
+  
+
+
+
+          
+  
+  
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+      
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                   src="/images/eiko.jpg"
+                   alt="" />
+            
+            <div class="site-author-info">
+              <p class="site-author-name" itemprop="name">JagaimoTomato</p>
+              <p class="site-description motion-element" itemprop="description">人的梦想是不会结束的</p>
+            </div>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://github.com/jagaimotomato" target="_blank" title="GitHub">
+                    
+                       <i class="fab fa-github" style="color: #191717"></i><span>jagaimotomato</span></a>
+                </span>
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://t.me/shiki_mt" target="_blank" title="Telegram 频道">
+                    
+                       <i class="fab fa-telegram" style="color: #41AADE"></i><span>TG频道</span></a>
+                </span>
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://psnprofiles.com/SwaggyZW" target="_blank" title="PSN">
+                    
+                       <i class="fab fa-playstation" style="color: #003791"></i><span>SwaggyZW</span></a>
+                </span>
+              
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+          
+          
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="clock" aria-label="00:00:00 AM">
+  <div class="clock__block clock__block--delay2" aria-hidden="true" data-time-group>
+    <div class="clock__digit-group">
+      <div class="clock__digits" data-time="a">00</div>
+      <div class="clock__digits" data-time="b">00</div>
+    </div>
+  </div>
+  <div class="clock__colon"></div>
+  <div class="clock__block clock__block--delay1" aria-hidden="true" data-time-group>
+    <div class="clock__digit-group">
+      <div class="clock__digits" data-time="a">00</div>
+      <div class="clock__digits" data-time="b">00</div>
+    </div>
+  </div>
+  <div class="clock__colon"></div>
+  <div class="clock__block" aria-hidden="true" data-time-group>
+    <div class="clock__digit-group">
+      <div class="clock__digits" data-time="a">00</div>
+      <div class="clock__digits" data-time="b">00</div>
+    </div>
+  </div>
+  <div class="clock__block clock__block--delay2 clock__block--small" aria-hidden="true" data-time-group>
+    <div class="clock__digit-group">
+      <div class="clock__digits" data-time="a">PM</div>
+      <div class="clock__digits" data-time="b">AM</div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/components/clock.js"></script>
+
+
+<div class="copyright">
+  
+  <i class="fa fa-copyright"></i>
+  <span itemprop="copyrightYear">2022</span>
+  based on hexo made by
+  <span class="with-jump">
+    <svg t="1658733434371" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3143" width="16" height="16"><path d="M278.87 576.13l-79.39-98.88c-8.1-10.1-6.49-24.85 3.6-32.97l0.02-0.01c10.1-8.11 24.86-6.5 32.97 3.6l0.01 0.01 79.39 98.88c8.1 10.1 6.49 24.85-3.6 32.96h-0.02c-10.1 8.12-24.87 6.51-32.98-3.59zM630.64 595.66L522.5 457.16c-7.95-10.23-6.11-24.96 4.11-32.92 10.23-7.95 24.96-6.11 32.92 4.11l108.12 138.5c7.95 10.21 6.12 24.93-4.09 32.89-0.01 0-0.01 0.01-0.02 0.01-10.21 7.96-24.94 6.12-32.9-4.09zM725.7 542.29l-25.83-29.96c-8.46-9.81-7.37-24.61 2.44-33.07h0.02c9.8-8.46 24.6-7.37 33.06 2.44l0.02 0.02 25.83 29.95c8.45 9.82 7.36 24.63-2.46 33.09-9.8 8.46-24.6 7.37-33.06-2.44-0.01-0.02-0.01-0.02-0.02-0.03z" fill="#EBB85D" p-id="3144"></path><path d="M676.71 578.32l-82.93-103.26c-8.1-10.11-6.49-24.87 3.61-32.98 10.1-8.11 24.86-6.5 32.98 3.59v0.01l82.91 103.27c8.11 10.09 6.51 24.84-3.58 32.95-0.01 0-0.01 0.01-0.02 0.01h-0.02c-10.09 8.11-24.84 6.5-32.95-3.59 0 0.01 0 0 0 0z" fill="#EBB85D" p-id="3145"></path><path d="M380.09 879.92c-64.51 0-122.13-20.36-164.56-62.79-2.47-2.49-4.75-5.07-6.96-7.69a128.06 128.06 0 0 1-49.1-30.6c-53.34-53.32-50.9-143.54 4.38-208.72 21.83-91.34 76.44-184.1 154.42-262.09 168.68-168.67 397.06-214.77 509.1-102.74 56 56 74.8 140.49 53.36 238.71 19.11 55.9 1.36 123.05-46.04 170.47a186.317 186.317 0 0 1-56.19 38.78 656.806 656.806 0 0 1-53.87 61.13C616.97 822.04 488.79 879.92 380.09 879.92z m284.41-673.6c-92.65 0-208.37 52.32-302 145.93-71.92 71.93-121.43 156.89-139.38 239.27l-1.81 8.35-5.82 6.27c-37.86 40.8-43.04 97.22-11.79 128.46a67.665 67.665 0 0 0 31.12 17.48l9.79 2.6 8.8 10.78c2 2.6 4.14 5.09 6.4 7.47 86.13 86.1 278.76 39.08 420.61-102.79a594.413 594.413 0 0 0 53.42-61.44l5.38-7.11 8.32-3.21a123.396 123.396 0 0 0 42.94-28.15c31.78-31.81 43.68-77.63 28.96-111.45l-4.21-9.65 2.49-10.21c19.52-80.35 7.24-147.6-34.58-189.42-29.29-29.28-70.92-43.18-118.64-43.18z" fill="#D26500" p-id="3146"></path><path d="M841.13 205.28C729.08 93.25 500.71 139.35 332.02 308.02c-77.99 78-132.58 170.75-154.42 262.09-55.28 65.18-57.7 155.39-4.36 208.73a128 128 0 0 0 49.09 30.59c2.2 2.64 4.49 5.22 6.96 7.69 42.44 42.43 100.07 62.8 164.56 62.8 108.7 0 236.88-57.89 344.55-165.54a652.751 652.751 0 0 0 53.87-61.14 185.535 185.535 0 0 0 56.19-38.78c47.4-47.4 65.15-114.56 46.04-170.45 21.42-98.24 2.62-182.73-53.37-238.73z m-7.95 253.5c14.73 33.82 2.82 79.66-28.96 111.45a124.817 124.817 0 0 1-30.68 22.58l-24.4-28.27c-8.45-9.81-23.24-10.92-33.05-2.47l-0.02 0.02c-9.81 8.45-10.92 23.27-2.46 33.08l0.01 0.01 23.16 26.85a589.491 589.491 0 0 1-42.61 48.12c-6.08 6.1-12.39 11.76-18.64 17.5L573.28 556.69c-7.95-10.22-22.69-12.06-32.91-4.1-10.22 7.95-12.06 22.69-4.1 32.91l103.51 132.59c-133.27 103.44-290.69 130.36-366.22 54.84-2.26-2.38-4.4-4.88-6.4-7.48l-8.79-10.77-9.8-2.6a67.72 67.72 0 0 1-31.1-17.47c-28.96-28.98-26.26-79.43 4.39-119.16l70.78 88.14c8.1 10.1 22.86 11.72 32.96 3.62l0.01-0.01 0.02-0.02c10.1-8.1 11.71-22.85 3.62-32.95l-0.02-0.02-79.39-98.88a23.318 23.318 0 0 0-7.1-5.93c21.42-75.34 68.04-151.66 133.55-217.18 73.75-73.75 161.18-121.72 240.29-138.83l73.9 92.05c8.11 10.1 22.87 11.72 32.98 3.61v-0.01c10.1-8.11 11.72-22.86 3.61-32.96l-55.83-69.52c2.33-0.06 4.71-0.25 7.02-0.25 47.73 0 89.35 13.9 118.66 43.19 41.8 41.82 54.09 109.09 34.58 189.42l-2.49 10.23 4.17 9.63z" fill="#EBB85D" opacity=".2" p-id="3147"></path></svg>
+  </span>
+  <span class="with-jump">
+    <svg t="1658733279983" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2541" width="16" height="16"><path d="M527.928889 225.242074a37.925926 37.925926 0 0 0 37.925926-37.925926V72.324741a37.925926 37.925926 0 0 0-75.851852 0v114.991407a37.925926 37.925926 0 0 0 37.925926 37.925926" fill="#88C057" p-id="2542"></path><path d="M428.411259 352.900741a112.184889 112.184889 0 0 0 99.51763 58.974815c41.946074 0 79.189333-22.034963 100.731259-61.402075l85.409185-185.837037a37.925926 37.925926 0 1 0-68.873481-31.668148l-84.195556 183.371852a36.977778 36.977778 0 0 1-33.071407 19.683556c-6.674963 0-23.324444-1.896296-31.857778-17.218371l-85.409185-185.837037a37.888 37.888 0 1 0-68.873482 31.668148l86.622815 188.264297" fill="#88C057" p-id="2543"></path><path d="M880.336593 330.903704c-31.819852-18.925037-68.759704-32.274963-109.719704-39.632593a37.774222 37.774222 0 0 0-41.14963 21.504l-32.464592 70.807704-1.782519 3.299555c-34.588444 63.146667-97.128296 100.845037-167.291259 100.845037a189.477926 189.477926 0 0 1-165.850074-98.000592l-35.688296-76.98963a37.660444 37.660444 0 0 0-41.111704-21.466074c-40.580741 7.281778-77.179259 20.404148-108.771556 39.063704C82.564741 385.896296 34.891852 477.563259 34.891852 602.832593c0 253.421037 193.498074 417.185185 493.037037 417.185185 48.165926 0 97.924741-4.513185 147.835259-13.387852 200.741926-35.612444 345.92237-206.203259 345.201778-405.579852-0.493037-123.904-47.786667-214.774519-140.629333-270.14637" fill="#ED7161" p-id="2544"></path></svg>
+  </span>
+</div>
+
+
+
+
+    </footer>
+  </div>
+  <div id="pjax">
+    
+    
+
+  </div>
+
+  
+
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+
+<script src="/js/components/sidebar.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+  var pjax = new Pjax({
+    selectors: [
+      'head title',
+      '.header .pixel-title',
+      '#page-configurations',
+      '.content-wrap',
+      '.post-toc-wrap',
+      '.languages',
+      '#pjax'
+    ],
+    switches: {
+      '.post-toc-wrap': Pjax.switches.innerHTML
+    },
+    analytics: false,
+    cacheBust: false,
+    // scrollTo : document.querySelector('.main').offsetTop - 60
+  });
+
+  const pixelTitle = document.querySelector('.header .pixel-title')
+  const title = document.querySelector('head title')
+
+  window.addEventListener('pjax:success', () => {
+    pjax.refresh(title)
+    pjax.refresh(pixelTitle)
+    document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+      var code = element.text || element.textContent || element.innerHTML || '';
+      var parent = element.parentNode;
+      parent.removeChild(element);
+      var script = document.createElement('script');
+      if (element.id) {
+        script.id = element.id;
+      }
+      if (element.className) {
+        script.className = element.className;
+      }
+      if (element.type) {
+        script.type = element.type;
+      }
+      if (element.src) {
+        script.src = element.src;
+        // Force synchronous loading of peripheral JS.
+        script.async = false;
+      }
+      if (element.dataset.pjax !== undefined) {
+        script.dataset.pjax = '';
+      }
+      if (code !== '') {
+        script.appendChild(document.createTextNode(code));
+      }
+      parent.appendChild(script);
+    });
+    NexT.boot.refresh();
+    // Define Motion Sequence & Bootstrap Motion.
+    if (CONFIG.motion.enable) {
+      NexT.motion.integrator
+        .init()
+        .add(NexT.motion.middleWares.subMenu)
+        .add(NexT.motion.middleWares.postList)
+        .bootstrap();
+    }
+    // NexT.utils.updateSidebarPosition();
+  });
+</script>
+
+
+  <script type="text/javascript" src="/js/umi.min.js"></script>
+</body>
+</html>

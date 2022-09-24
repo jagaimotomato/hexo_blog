@@ -353,6 +353,17 @@ algolia_search:
 # For more information: https://github.com/francoischalifour/medium-zoom
 mediumzoom: false
 
+  # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
+beian:
+  enable: false
+  icp: 皖ICP备2021010429号
+  # The digit in the num of gongan beian.
+  gongan_id: 皖ICP备2021010429号-
+  # The full num of gongan beian.
+  gongan_num: 2
+  # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
+  gongan_icon_url:
+
 vendors:
   # Internal path prefix.
   _internal: lib
